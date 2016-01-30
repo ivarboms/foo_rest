@@ -1,0 +1,20 @@
+.artist {
+	background-color: #fafaff;
+}
+
+.title {
+	background-color: #f0fff0;
+}
+
+.album {
+	background-color: #ffeeee
+}
+
+.track:hover {
+	cursor: pointer;
+	outline: solid 1px black;
+}
+
+.track.playing {
+	font-weight: bold;
+}

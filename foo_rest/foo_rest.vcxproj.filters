@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="External">
+      <UniqueIdentifier>{7c3690c4-39cd-455b-8689-05675c3e37e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Foobar">
+      <UniqueIdentifier>{6534e8a6-b04a-4fb1-8bc2-985ab4e62f34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server">
+      <UniqueIdentifier>{c8e676c0-49d6-42fe-a267-9ec74a7bc73f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{8ee6dbb3-90a3-48f4-a752-8e8b848a4340}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="json.hpp">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="server_http.hpp">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="server_https.hpp">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="Data.h">
+      <Filter>Foobar</Filter>
+    </ClInclude>
+    <ClInclude Include="Foobar.h">
+      <Filter>Foobar</Filter>
+    </ClInclude>
+    <ClInclude Include="Serialization.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="Server.h">
+      <Filter>Server</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="MainThreadCallback.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerProxy.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Foobar.cpp">
+      <Filter>Foobar</Filter>
+    </ClCompile>
+    <ClCompile Include="Server.cpp">
+      <Filter>Server</Filter>
+    </ClCompile>
+    <ClCompile Include="MainThreadCallback.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerProxy.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="foo_rest.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

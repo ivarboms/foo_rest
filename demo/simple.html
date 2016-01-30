@@ -1,0 +1,21 @@
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+<button data-url="playlist/1">Get playlist #1 content</button>
+<button data-url="404">404</button>
+<button data-url="playlists">Get all playlists</button>
+
+<pre id="result" style="border: 1px solid black; background-color: #EEEEEE">Results will appear here</pre>
+
+<script>
+	$('button').click(function(){
+		$.getJSON({
+			url: 'http://localhost:9998/' + $(this).data('url'),
+			success: function(data) {
+				$('#result').html(JSON.stringify(data, null, 2));
+			},
+			error: function(data) {
+				$('#result').html('ERROR: ' + JSON.stringify(data, null, 2));
+			},
+		});
+	});
+</script>
