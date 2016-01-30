@@ -1,4 +1,4 @@
-foo-rest
+foo_rest
 ==================
 
 REST interface for [foobar2000](https://www.foobar2000.org/).
@@ -48,43 +48,43 @@ For example usage, see demos in the /demo folder.
 		<tr>
 			<td>/playlists GET</td>
 			<td>Returns an array of all the playlists.</td>
-			<td><a href="http://localhost:9998/playlists">/playlists</a></td>
+			<td>/playlists</td>
 			<td>[ { title, id, itemCount, isPlaying } ]</td>
 		</tr>
 		<tr>
 			<td>/playlist/{id} GET</td>
 			<td>Returns the items in a specific playlist.</td>
-			<td><a href="http://localhost:9998/playlist/1">/playlist/1</a></td>
+			<td>/playlist/1</td>
 			<td>[ { title, id, isPlaying } ]</td>
 		</tr>
 		<tr>
 			<td>/play/{playlistId}/{trackId} POST</td>
 			<td>Plays the specified item in the specific playlist.</td>
-			<td><a href="http://localhost:9998/play/1/13">play/1/13</a></td>
+			<td>/play/1/13</td>
 			<td>Nothing.</td>
 		</tr>
 		<tr>
 			<td>/playback/{commandId} POST</td>
 			<td>Executes the specified playback command. The list of available commands can be found in foobar::PlaybackCommand</td>
-			<td><a href="http://localhost:9998/playback/1">playback/1</a></td>
+			<td>/playback/1</td>
 			<td>Nothing.</td>
 		</tr>
 		<tr>
 			<td>/volume GET</td>
 			<td>Returns the current volume, in dB.</td>
-			<td><a href="http://localhost:9998/volume">/volume</a></td>
-			<td>Volume in dB.</td>
+			<td>/volume</td>
+			<td>{ db }</td>
 		</tr>
 		<tr>
 			<td>/volume/{volume} POST</td>
 			<td>Sets the volume. Must be in dB.</td>
-			<td><a href="http://localhost:9998/volume/-5.31">/volume/-5.31</a></td>
+			<td>/volume/-5.31</td>
 			<td>Nothing.</td>
 		</tr>
 		<tr>
 			<td>/volume/ismuted GET</td>
 			<td>Returns whether the volume is muted or not.</td>
-			<td><a href="http://localhost:9998/volume/ismuted">/volume/ismuted</a></td>
+			<td>/volume/ismuted</td>
 			<td>{ isMuted }</td>
 		</tr>
 	</tbody>
