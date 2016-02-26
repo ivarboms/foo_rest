@@ -90,13 +90,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;FOO_REST_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>F:\SDKs\foobar2000 2015-08-03;F:\SDKs\boost_1_60_0;C:\dev\libs\foobar2000 sdk 2015-08-03;C:\dev\libs\boost_1_60_0</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\SDKs\foobar2000 2015-08-03;F:\SDKs\boost_1_60_0;C:\dev\libs\foobar2000 sdk 2015-08-03;C:\dev\libs\boost_1_60_0;D:\SDKs\foobar2000 2015-08-03;D:\SDKs\boost_1_60_0</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4503</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>F:\SDKs\foobar2000 2015-08-03\foobar2000\shared\$(Configuration);F:\SDKs\boost_1_60_0\stage\lib;C:\dev\libs\foobar2000 sdk 2015-08-03\foobar2000\shared\$(Configuration);C:\dev\libs\boost_1_60_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>F:\SDKs\foobar2000 2015-08-03\foobar2000\shared\$(Configuration);F:\SDKs\boost_1_60_0\stage\lib;C:\dev\libs\foobar2000 sdk 2015-08-03\foobar2000\shared\$(Configuration);C:\dev\libs\boost_1_60_0\stage\lib;D:\SDKs\foobar2000 2015-08-03\foobar2000\shared\$(Configuration);D:\SDKs\boost_1_60_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>shared.lib;foobar2000_SDK.lib;pfc.lib;foobar2000_component_client.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -122,14 +122,14 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;FOO_REST_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>F:\SDKs\foobar2000 2015-08-03;F:\SDKs\boost_1_60_0;C:\dev\libs\foobar2000 sdk 2015-08-03;C:\dev\libs\boost_1_60_0</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\SDKs\foobar2000 2015-08-03;F:\SDKs\boost_1_60_0;C:\dev\libs\foobar2000 sdk 2015-08-03;C:\dev\libs\boost_1_60_0;D:\SDKs\foobar2000 2015-08-03;D:\SDKs\boost_1_60_0</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>F:\SDKs\foobar2000 2015-08-03\foobar2000\shared\$(Configuration);F:\SDKs\boost_1_60_0\stage\lib;C:\dev\libs\foobar2000 sdk 2015-08-03\foobar2000\shared\$(Configuration);C:\dev\libs\boost_1_60_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>F:\SDKs\foobar2000 2015-08-03\foobar2000\shared\$(Configuration);F:\SDKs\boost_1_60_0\stage\lib;C:\dev\libs\foobar2000 sdk 2015-08-03\foobar2000\shared\$(Configuration);C:\dev\libs\boost_1_60_0\stage\lib;D:\SDKs\foobar2000 2015-08-03\foobar2000\shared\$(Configuration);D:\SDKs\boost_1_60_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>shared.lib;foobar2000_SDK.lib;pfc.lib;foobar2000_component_client.lib;shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>

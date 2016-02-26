@@ -22,7 +22,10 @@ struct Playlist
 
 struct PlaylistItem
 {
+	std::wstring artist;
 	std::wstring title;
+	std::wstring album;
+	std::wstring trackNumber;
 	size_t id;
 	bool isPlaying;
 };

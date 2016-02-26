@@ -43,9 +43,21 @@ std::vector<PlaylistItem> getPlaylistContentImpl(size_t playlistId)
 	std::vector<PlaylistItem> content;
 	content.reserve(handles.get_size());
 
-	titleformat_object::ptr script;
-	pfc::string8 pattern("%artist%|%title%|%album%");
-	static_api_ptr_t<titleformat_compiler>()->compile_safe_ex(script, pattern);
+	titleformat_object::ptr artistScript;
+	titleformat_object::ptr titleScript;
+	titleformat_object::ptr albumScript;
+	titleformat_object::ptr trackNumberScript;
+
+	pfc::string8 artistPattern("%artist%");
+	pfc::string8 titlePattern("%title%");
+	pfc::string8 albumPattern("%album%");
+	pfc::string8 trackNumberPattern("%tracknumber%]");
+
+	auto compiler = static_api_ptr_t<titleformat_compiler>();
+	compiler->compile_safe_ex(artistScript, artistPattern);
+	compiler->compile_safe_ex(titleScript, titlePattern);
+	compiler->compile_safe_ex(albumScript, albumPattern);
+	compiler->compile_safe_ex(trackNumberScript, trackNumberPattern);
 	static_api_ptr_t<playback_control> playbackControl;
 
 	size_t playingPlaylist;
@@ -53,13 +65,23 @@ std::vector<PlaylistItem> getPlaylistContentImpl(size_t playlistId)
 	const bool isPlaying = api->get_playing_item_location(&playingPlaylist, &playingItem);
 	bool isPlayingCurrentPlaylist = playlistId == playingPlaylist && isPlaying;
 
-	handles.for_each([&script, &playbackControl, &content, playingItem, isPlayingCurrentPlaylist](const metadb_handle_ptr handle)
+	handles.for_each([&](const metadb_handle_ptr handle)
 	{
+		pfc::string_formatter formattedArtist;
 		pfc::string_formatter formattedTitle;
-		playbackControl->playback_format_title_ex(handle, nullptr, formattedTitle, script, nullptr, playback_control::display_level_all);
+		pfc::string_formatter formattedAlbum;
+		pfc::string_formatter formattedTrackNumber;
+
+		playbackControl->playback_format_title_ex(handle, nullptr, formattedArtist, artistScript, nullptr, playback_control::display_level_all);
+		playbackControl->playback_format_title_ex(handle, nullptr, formattedTitle, titleScript, nullptr, playback_control::display_level_all);
+		playbackControl->playback_format_title_ex(handle, nullptr, formattedAlbum, albumScript, nullptr, playback_control::display_level_all);
+		playbackControl->playback_format_title_ex(handle, nullptr, formattedTrackNumber, trackNumberScript, nullptr, playback_control::display_level_all);
 
 		PlaylistItem item;
+		item.artist = utf8_to_wstring(formattedArtist.c_str());
 		item.title = utf8_to_wstring(formattedTitle.c_str());
+		item.album = utf8_to_wstring(formattedAlbum.c_str());
+		item.trackNumber = utf8_to_wstring(formattedTrackNumber.c_str());
 		item.id = content.size();
 		item.isPlaying = isPlayingCurrentPlaylist && item.id == playingItem;
 

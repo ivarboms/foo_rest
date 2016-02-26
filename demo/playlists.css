@@ -10,6 +10,10 @@
 	background-color: #ffeeee
 }
 
+.trackNumber {
+	background-color: #ffffee
+}
+
 .track:hover {
 	cursor: pointer;
 	outline: solid 1px black;

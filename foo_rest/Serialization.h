@@ -15,7 +15,10 @@ nlohmann::json serialize(const Playlist& playlist)
 nlohmann::json serialize(const PlaylistItem& item)
 {
 	nlohmann::json json;
+	json["artist"] = wstring_to_utf8(item.artist);
 	json["title"] = wstring_to_utf8(item.title);
+	json["album"] = wstring_to_utf8(item.album);
+	json["trackNumber"] = wstring_to_utf8(item.trackNumber);
 	json["id"] = item.id;
 	json["isPlaying"] = item.isPlaying;
 	return json;

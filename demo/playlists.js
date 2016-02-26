@@ -32,15 +32,14 @@ function insertPlaylistContent(tr, data, playlistId) {
 		var tracks = [];
 		for (var i = 0; i < data.length; ++i) {
 			var item = data[i];
-			//Title is in the format 'artist|track_title|album'.
-			var elements = item.title.split('|');
-			var artist = '<span class="artist">' + elements[0] + '</span>';
-			var title = '<span class="title">' + elements[1] + '</span>';
-			var album = '<span class="album">' + elements[2] + '</span>';
+			var artist = '<span class="artist">' + item.artist + '</span>';
+			var title = '<span class="title">' + item.title + '</span>';
+			var album = '<span class="album">' + item.album + '</span>';
+			var trackNumber = '<span class="trackNumber">(' + item.trackNumber + ')</span>';
 
 			var active = item.isPlaying ? 'playing' : '';
 			var span = '<span class="track ' + active + '" data-playlist-id="' + playlistId + '" data-track-id="' + item.id + '">';
-			span += artist + ' - ' + title + ' - ' + album + '</span>';
+			span += artist + ' - ' + title + ' - ' + album + ' ' + trackNumber + '</span>';
 
 			tracks.push(span);
 		}

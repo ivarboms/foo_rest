@@ -55,7 +55,7 @@ For example usage, see demos in the /demo folder.
 			<td>/playlist/{id} GET</td>
 			<td>Returns the items in a specific playlist.</td>
 			<td>/playlist/1</td>
-			<td>[ { title, id, isPlaying } ]</td>
+			<td>[ { artist, title, album, trackNumber, id, isPlaying } ]</td>
 		</tr>
 		<tr>
 			<td>/play/{playlistId}/{trackId} POST</td>
@@ -89,3 +89,7 @@ For example usage, see demos in the /demo folder.
 		</tr>
 	</tbody>
 </table>
+
+
+## Installing
+Put foo_rest.dll in `C:\Program Files (x86)\foobar2000\components` (or wherever foobar2000 is installed).
