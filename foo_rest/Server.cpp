@@ -135,6 +135,7 @@ void playbackCommand(HttpServer::Response& response, std::shared_ptr<HttpServer:
 Server::Server()
 	: server(9998)
 {
+	server.config.address = "127.0.0.1";
 	server.resource["^/playlists$"]["GET"] = &getPlaylists;
 	server.resource["^/playlist/([0-9]+)$"]["GET"] = &getPlaylistContent;
 
