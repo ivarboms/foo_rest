@@ -6,7 +6,7 @@
 DECLARE_COMPONENT_VERSION(
 "foo_rest",
 "0.1",
-"REST interface for foobar."
+"REST interface for foobar.\nhttps://github.com/ivarboms/foo_rest"
 )
 
 class InitQuit : public initquit
